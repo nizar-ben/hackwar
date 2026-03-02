@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+<link rel="stylesheet" href="marks.css">
+
+<title>Academic Marks</title>
+</head>
+<script>
+
+</script>
+
+<body>
+
+<nav class="navbar">
+ <div class="nav-icons">
+    <div class="notification-container">
+        <i class="fas fa-bell notification-icon" onclick="toggleDropdown()"></i>
+        
+        <div class="notification-dropdown" id="notificationDropdown">
+            <p class="dropdown-title">Notifications</p>
+           <div class="notification-item">📢 messied mrid !!(yes)</div>
+            <div class="notification-item">📝 preparation algo </div>
+            <div class="notification-item">📊 Marks updated</div>
+            <div class="notification-item">💰 dakhlet la bourse!!!</div>
+        </div>
+    </div>
+</div>
+    <div class="nav-left">
+       
+       <a href="" class="logo"> <i class="fa-solid fa-id-card"></i></a>
+    </div>
+
+    <a href="home.html" class="logo">Progres +</a>
+
+    <div class="nav-right">
+       <a href="" class="logo"> <i class="fa-solid fa-circle-user"></i></a>
+    </div>
+
+</nav>
+<div class="module-card">
+    <div class="meta-info">
+        <span class="badge-meta">Coef: 3</span>
+        <span class="badge-meta">Crd: 25</span>
+    </div>
+    <h3>Analyse Numérique</h3>
+    <div class="notes-container">
+        <div class="note-badge">Exam: <span class="note-exam">12.50</span></div>
+        <div class="note-badge">CC: <span class="note-cc">14.00</span></div>
+    </div>
+    <div class="moyenne-display-container">
+        <span class="moyenne-module"></span>
+    </div>
+</div>
+<div class="module-card">
+    <div class="meta-info">
+        <span class="badge-meta">Coef: 3</span>
+        <span class="badge-meta">Crd: 25</span>
+    </div>
+    <h3>algorithm</h3>
+    <div class="notes-container">
+        <div class="note-badge">Exam: <span class="note-exam">12.50</span></div>
+        <div class="note-badge">CC: <span class="note-cc">14.00</span></div>
+    </div>
+    <div class="moyenne-display-container">
+        <span class="moyenne-module"></span>
+    </div>
+</div>
+<div class="module-card">
+    <div class="meta-info">
+        <span class="badge-meta">Coef: 3</span>
+        <span class="badge-meta">Crd: 25</span>
+    </div>
+    <h3>archi</h3>
+    <div class="notes-container">
+        <div class="note-badge">Exam: <span class="note-exam">12.50</span></div>
+        <div class="note-badge">CC: <span class="note-cc">14.00</span></div>
+    </div>
+    <div class="moyenne-display-container">
+        <span class="moyenne-module"></span>
+    </div>
+</div>
+<div class="module-card">
+    <div class="meta-info">
+        <span class="badge-meta">Coef: 3</span>
+        <span class="badge-meta">Crd: 25</span>
+    </div>
+    <h3>syste d'exploitation</h3>
+    <div class="notes-container">
+        <div class="note-badge">Exam: <span class="note-exam">12.50</span></div>
+        <div class="note-badge">CC: <span class="note-cc">14.00</span></div>
+    </div>
+    <div class="moyenne-display-container">
+        <span class="moyenne-module"></span>
+    </div>
+</div>
+<div class="module-card">
+    <div class="meta-info">
+        <span class="badge-meta">Coef: 3</span>
+        <span class="badge-meta">Crd: 25</span>
+    </div>
+    <h3>algebre</h3>
+    <div class="notes-container">
+        <div class="note-badge">Exam: <span class="note-exam">12.50</span></div>
+        <div class="note-badge">CC: <span class="note-cc">14.00</span></div>
+    </div>
+    <div class="moyenne-display-container">
+        <span class="moyenne-module"></span>
+    </div>
+</div>
+
+
+
+<div class="module-card">
+    <div class="meta-info">
+        <span class="badge-meta">Coef: <span class="module-coef">3</span></span>
+    </div>
+    <h3>Analyse Numérique</h3>
+    <div class="notes-container">
+        <div class="note-badge">Exam: <span class="note-exam">12.00</span></div>
+        <div class="note-badge">CC: <span class="note-cc">14.00</span></div>
+    </div>
+    <div class="moyenne-display-container">
+        <span class="moyenne-module">--</span>
+    </div>
+</div>
+<div class="total-card" style="margin-top: 30px; padding: 20px; background: #f8f9fa; border: 2px solid #0077b6; border-radius: 12px; text-align: center;">
+    <h2 style="margin: 0; color: #0077b6;">Moyenne Générale</h2>
+    <div style="font-size: 2.5rem; font-weight: bold;" id="moyenne-generale">--</div>
+</div>
+<script src="marks.js"></script>
+</body>
+</html>

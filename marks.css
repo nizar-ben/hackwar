@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f0f0f0;
+}
+
+
+.navbar{
+    background:linear-gradient(to right,#0B489C,#0E3B98);
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: 40px;
+}
+
+.navbar h1{
+    font-size:28px;
+}
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.notification-icon:hover {
+    transform: scale(1.1);
+}
+
+.notification-dropdown {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: none;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-title {
+    padding: 12px;
+    font-weight: bold;
+    background: #1e4da1;
+    color: white;
+    margin: 0;
+}
+
+.notification-item {
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #0B489C;
+}
+
+.notification-item:hover {
+    background: #f2f2f2;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    color: #a8c5ff;
+}
+/* Conteneur principal de la carte */
+.module-card {
+    width: 100%;
+    max-width: 900px; /* Largeur similaire à ton image */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin: 10px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+/* Titre du module (Analyse Numérique) */
+.module-card h3 {
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+/* Conteneur des petites étiquettes de notes */
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Style des badges (Exam et CC) */
+.note-badge {
+    background-color: #fff5f5; /* Fond rosé très clair */
+    color: #a52a2a; /* Texte rouge brique */
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 0.9rem;
+    width: fit-content;
+    border: 1px solid #ffe4e4;
+}
+
+/* Labels Coef et Crd en haut à droite */
+.meta-info {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.badge-meta {
+    background: #fff5f5;
+    color: #a52a2a;
+    padding: 2px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Moyenne affichée en gros à droite */
+.moyenne-display-container {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    text-align: right;
+}
+
+.moyenne-module {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #a52a2a; 
+}
+
+.container{
+    padding:40px 80px;
+}
+
+h2{
+    margin-bottom:30px;
+   text-align: center;
+}
+
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px 25px;
+    margin-bottom:25px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.card-body{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.title{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.badges{
+    display:flex;
+    gap:10px;
+}
+
+.badge{
+    padding:6px 12px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.green{
+    border-left:6px solid #0f7a50;
+}
+
+.green .badge{
+    background:#e2f3ec;
+    color:#0f7a50;
+}
+
+.green .final{
+    color:#0f7a50;
+}
+
+.red{
+    border-left:6px solid #c0392b;
+}
+
+.red .badge{
+    background:#fdecea;
+    color:#c0392b;
+}
+
+.red .final{
+    color:#c0392b;
+}
+
+.final{
+    font-size:22px;
+    font-weight:bold;
+}
+.card.green{
+    border-left: 6px solid #0f7a50;
+}
+
+.card.red{
+    border-left: 6px solid #c0392b;
+}

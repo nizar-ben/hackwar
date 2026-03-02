@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="time.css">
+</head>
+<body>
+
+   <nav class="navbar">
+<div class="nav-icons">
+    <div class="notification-container">
+        <i class="fas fa-bell notification-icon" onclick="toggleDropdown()"></i>
+        
+        <div class="notification-dropdown" id="notificationDropdown">
+            <p class="dropdown-title">Notifications</p>
+            <div class="notification-item">📢 messied mrid !!(yes)</div>
+            <div class="notification-item">📝 preparation algo </div>
+            <div class="notification-item">📊 Marks updated</div>
+            <div class="notification-item">💰 dakhlet la bourse!!!</div>
+        </div>
+    </div>
+</div>
+    <div class="nav-left">
+       
+       <a href="" class="logo"> <i class="fa-solid fa-id-card"></i></a>
+    </div>
+
+    <a href="home.html" class="logo">Progres +</a>
+
+    <div class="nav-right">
+       <a href="" class="logo"> <i class="fa-solid fa-circle-user"></i></a>
+    </div>
+
+</nav>
+   </div>
+
+<!-- ===== DAYS ===== -->
+<div class="days">
+    <div class="day-btn" onclick="changeDay('sunday', this)">Sunday</div>
+    <div class="day-btn" onclick="changeDay('monday', this)">Monday</div>
+    <div class="day-btn" onclick="changeDay('tuesday', this)">Tuesday</div>
+    <div class="day-btn active" onclick="changeDay('wednesday', this)">Wednesday</div>
+    <div class="day-btn" onclick="changeDay('thursday', this)">Thursday</div>
+    <div class="day-btn" onclick="changeDay('saturday', this)">Saturday</div>
+</div>
+
+<!-- ===== FILTERS ===== -->
+<div class="filters">
+    <div class="filter"><i class="fas fa-chevron-down"></i> Section</div>
+    <div class="filter"><i class="fas fa-chevron-down"></i> Group</div>
+    <div class="filter"><i class="fas fa-chevron-down"></i> Semester 1</div>
+</div>
+
+<!-- ===== SCHEDULE ===== -->
+<div class="schedule" id="schedule">
+</div>
+ <script>
+
+const schedules = {
+
+    sunday: `
+     <div class="row">
+            <div class="time">08:00</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="time">09:35</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div> <div class="row">
+            <div class="time">11:10</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+                <div class="row">
+            <div class="time">12:45</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+<div class="row">
+            <div class="time">2:20</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+    `,
+
+    monday: `
+     <div class="row">
+            <div class="time">08:00</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="time">9:30</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">TD</div>
+                    <div>Math</div>
+                    <div class="teacher">Karim</div>
+                </div>
+                <div class="room">1/202</div>
+            </div>
+        </div>
+                <div class="row">
+            <div class="time">11:10</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="time">12:45</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+<div class="row">
+            <div class="time">2:20</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+    `,
+ tuesday: `
+     <div class="row">
+            <div class="time">08:00</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="time">09:35</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div> <div class="row">
+            <div class="time">11:10</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+           
+    `,
+saturday: `
+    
+        <div class="row">
+            <div class="time">09:35</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div> <div class="row">
+            <div class="time">11:10</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Physics</div>
+                    <div class="teacher">Ali</div>
+                </div>
+                <div class="room">2/101</div>
+            </div>
+        </div>
+           
+    `,
+
+    wednesday: `
+        <div class="row">
+            <div class="time">08:00</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Analyse</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="time">09:35</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="time">11:10</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">TD</div>
+                    <div>Analyse</div>
+                    <div class="teacher">Raber</div>
+                </div>
+                <div class="room">1/170</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="time">12:45</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+<div class="row">
+            <div class="time">2:20</div>
+            <div class="card">
+                <div class="course-info">
+                    <div class="badge">Lecture</div>
+                    <div>Algebre</div>
+                    <div class="teacher">masseid</div>
+                </div>
+                <div class="room">3/184</div>
+            </div>
+        </div>
+
+    `
+    
+};
+
+function changeDay(day, element){
+
+    document.querySelectorAll('.day-btn').forEach(btn=>{
+        btn.classList.remove('active');
+    });
+
+    element.classList.add('active');
+
+    document.getElementById('schedule').innerHTML =
+        schedules[day] || `<div class="no-course">No courses this day</div>`;
+}
+
+document.getElementById('schedule').innerHTML = schedules['wednesday'];
+
+</script>
+<script src="marks.js"></script>
+</body>
+</html>

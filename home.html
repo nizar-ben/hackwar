@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="home.css">
+  <title>Portail Étudiant</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ 
+<nav class="navbar">
+ <div class="nav-icons">
+    <div class="notification-container">
+        <i class="fas fa-bell notification-icon" onclick="toggleDropdown()"></i>
+        <div class="notification-dropdown" id="notificationDropdown">
+            <p class="dropdown-title">Notifications</p>
+            <div class="notification-item">📢 messied mrid !!(yes)</div>
+            <div class="notification-item">📝 preparation algo </div>
+            <div class="notification-item">📊 Marks updated</div>
+            <div class="notification-item">💰 dakhlet la bourse!!!</div>
+        </div>
+    </div>
+</div>
+    <div class="nav-left">
+       <a href="" class="logo"> <i class="fa-solid fa-id-card"></i></a>
+    </div>
+   
+    <a href="home.html" class="logo">Progres +</a>
+    <div class="nav-right">
+       <a href="profil.html" class="logo"> <i class="fa-solid fa-circle-user"></i></a>
+    </div>
+    
+</nav>
+
+
+  <div class="container">
+
+    <a href="time.html" class="card big"><i class="fa-solid fa-calendar" style=" font-size :100px;"></i>Timetable</a>
+
+    <a href="marks.html" class="card"><i class="fa-solid fa-graduation-cap"></i>Academic <br>Marks</a>
+
+    <a href="home.html" class="card"><i class="fa-solid fa-pen"></i>Assessment</a>
+
+    <a href="history.html" class="card white-card">
+        Administrative & <br> Financial
+    </a>
+
+    <a href="home.html" class="card"> <i class="fa-solid fa-folder"></i>Academic <br> Transcripts</a>
+
+    <a href="home.html" class="card"><i class="fa-solid fa-calculator"></i>Debts</a>
+
+    <a href="history.html" class="card"> <i class="fa-solid fa-clock"></i>Academic <br> History</a>
+
+</div>
+<script src="marks.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e6e6e6;
+}
+
+.navbar{
+    background: linear-gradient(to right,#0B489C,#0E3B98);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.navbar i{
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar i:hover{
+    transform: scale(1.2);
+}
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.notification-icon:hover {
+    transform: scale(1.1);
+}
+
+.notification-dropdown {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: none;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-title {
+    padding: 12px;
+    font-weight: bold;
+    background: #1e4da1;
+    color: white;
+    margin: 0;
+}
+
+.notification-item {
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #0E3B98;
+}
+
+.notification-item:hover {
+    background: #f2f2f2;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    color: #a8c5ff;
+}
+.navbar {
+  height: 90px;
+  background: linear-gradient(to right, #1e4fa3, #0ea5c6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.logo-circle {
+  background: white;
+  color: #1e4fa3;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 22px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  width: 550px;
+  margin: 80px auto;
+  background: #f2f2f2;
+  border: 3px solid #1e4fa3;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Profile Header */
+.profile-header {
+  background: linear-gradient(to right, #1e4fa3, #0ea5c6);
+  padding: 15px 25px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.profile-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.profile-header h2 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Info Section */
+.info {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-icon {
+  font-size: 26px;
+  color: #0ea5c6;
+}
+
+.label {
+  color: #888;
+  font-weight: 500;
+  display: block;
+}
+
+.info-item p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Language Box */
+.language-box {
+  border: 2px solid #0ea5c6;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  font-weight: 500;
+  color: #888;
+}
+
+.lang-btn {
+  border: 2px solid #1e4fa3;
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.out {
+  background: white;
+  border: 3px solid #b00000;
+  color: #b00000;
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+ .out :hover {
+  background: #b00000;
+  color: white;
+}
